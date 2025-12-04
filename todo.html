@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" class="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <i style="color: navy" class="fa-solid fa-list-check logoIcon"></i>
+        <h1 style="color: navy">TaskMaker</h1>
+      </div>
+      <div class="priority">
+        <span class="priority_span">Filter By Priority:</span>
+        <div class="color high"></div>
+        <div class="color medium"></div>
+        <div class="color low"></div>
+        <div class="color critical"></div>
+      </div>
+      <div class="buttonholder">
+        <button class="add">+ Add</button>
+        <!-- <button class="remove"><i class="fa-solid fa-trash"></i> Delete</button> -->
+      </div>
+    </div>
+    <div class="task-container"></div>
+    <div class="main-body" hidden>
+      <div class="modal">
+        <div class="modal-design">
+          <h1 class="modal-heading">
+            Create <br />
+            Your <br />
+            Task <br />
+            😁🎯
+          </h1>
+        </div>
+        <div class="main-modal">
+          <span class="category">Select the priority of your task:</span><br />
+          <div class="categorization">
+            <div class="priority-set high"></div>
+            <div class="priority-set medium"></div>
+            <div class="priority-set low"></div>
+            <div class="priority-set critical"></div>
+          </div>
+          <hr class="division" />
+          <div class="writing-area">
+            <p
+              class="error-msg"
+              style="color: red; display: none; font-size: 14px"
+            ></p>
+            <input
+              type="text"
+              id="task-title"
+              placeholder="Enter the title of your task..."
+            />
+            <textarea
+              name="task-details"
+              class="task-write"
+              placeholder="Describe your task..."
+            ></textarea>
+            <button class="save">Save✅</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="task-card high-priority">
+      <div class="task-header">
+        <span class="task-title">Task Title</span>
+        <span class="task-priority">High Priority</span>
+      </div>
+      <div class="task-body">
+        <p class="task-details">
+          This is the description of the task that the user wrote. It could be
+          longer and wrapped across multiple lines depending on the content.
+        </p>
+      </div>
+      <div class="task-footer">
+        <button class="edit-task">Edit</button>
+        <button class="delete-task">Delete</button>
+      </div>
+    </div> -->
+
+    <script src="./script.js"></script>
+  </body>
+</html>

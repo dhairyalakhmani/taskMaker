@@ -1,0 +1,305 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-image: radial-gradient( circle farthest-corner at 6.3% 21.8%,  rgba(236,6,117,1) 0%, rgba(13,32,67,1) 90% );;
+    font-family: "poppins";
+}
+:root{
+    --task_bg: white;
+    --high_priority :#be3144 ;
+    --medium_priority : #f1b963;
+    --low_priority: #8594e4;
+    --critical_priority: #060608;
+    --fonts: navy;
+}
+
+.navbar{
+    height: 10vh;
+    background-color: var(--task_bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoIcon{
+    font-size: 40px;
+}
+.priority_span{
+    color: var(--fonts);
+    font-weight: 600;
+}
+.priority{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.color{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 3px solid var(--fonts);
+    margin: 3px; 
+}
+.high{
+    background-color: var(--high_priority);
+}
+.high:hover{
+    background-color: #761325;
+}
+.medium{
+    background-color: var(--medium_priority);
+}
+.medium:hover{
+    background-color: #af7a2a;
+}
+.low{
+    background-color: var(--low_priority);
+}
+.low:hover{
+    background-color: #5361b1;
+}
+.critical{
+    background-color: var(--critical_priority);
+}
+.critical:hover{
+    background-color: #252731;
+}
+.add{
+    height: 38px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: rgb(93, 153, 34);
+    font-weight: 700;
+    cursor: pointer;
+    margin: auto 20px;
+}
+.add:hover{
+    background-color: rgb(71, 116, 25);
+}
+.remove{
+    height: 38px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: rgb(177, 35, 35);
+    font-weight: 700;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: rgb(135, 26, 26);
+}
+.button_holder{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modal{
+    display: flex;
+    position: absolute;
+    left: 34%;
+    top: 25%;
+    height:fit-content;
+    width: 36%;
+    margin: 10px;
+    background-color: white;
+    border-radius: 20px;
+    border: 4px solid black;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-design{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 40%;
+    background-image: radial-gradient( circle farthest-corner at 6.3% 21.8%,  rgba(236,6,117,1) 0%, rgba(13,32,67,1) 90% );;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.priority-set{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.modal-heading{
+    color: white;
+    text-align: center;
+}
+
+.category{
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px;
+    color: var(--fonts);
+}
+.categorization{
+    display: flex;
+    justify-content: space-evenly;
+}
+.division{
+    height: 5px;
+    border-radius: 4px;
+    background-color: var(--fonts);
+}
+#task-title{
+    width: 90%;
+    border: 3px solid var(--fonts);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.task-container{
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.writing-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.task-write{
+    width: 90%;
+    height: 28vh;
+    resize: none;
+    border: 3px solid var(--fonts);
+    border-radius: 5px;
+    /* overflow: hidden; */
+    font-size: 20px;
+    
+}
+.save{
+    margin: 10px;
+    width: 25%;
+    /* height: 5vh; */
+    padding: 5px;
+    border: 3px solid var(--fonts);
+    border-radius: 9px;
+    font-weight: 600;
+    background-image: radial-gradient( circle farthest-corner at 6.3% 21.8%,  rgba(236,6,117,1) 0%, rgba(13,32,67,1) 90% );;
+    cursor: pointer;
+}
+.selected {
+    box-sizing: border-box;
+  border: 4px solid var(--fonts);
+  box-shadow: 0 0 10px black;
+}
+/* <-------------------------------------------------->
+CSS for the created tasks */
+/* Task Card Layout */
+.task-card {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Header of the task card */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.task-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--fonts);
+}
+
+.task-priority {
+    padding: 5px 10px;
+    font-weight: 600;
+    color: white;
+    border-radius: 12px;
+    background-color: var(--high_priority); /* Default color, can be changed based on priority */
+}
+
+/* Body of the task card (Task details) */
+.task-body {
+    margin-bottom: 10px;
+}
+
+.task-details {
+    font-size: 1rem;
+    color: var(--fonts);
+    line-height: 1.5;
+}
+
+/* Footer of the task card (Action buttons) */
+.task-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-task, .delete-task {
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+/* Edit button (default color) */
+.edit-task {
+    background-color: #4CAF50;
+}
+
+.edit-task:hover {
+    background-color: #45a049;
+}
+
+/* Delete button (default color) */
+.delete-task {
+    background-color: #f44336;
+}
+
+.delete-task:hover {
+    background-color: #e53935;
+}
+
+/* Priority Color */
+.high-priority {
+    border: 3px solid var(--high_priority); /* High priority border color */
+}
+
+.medium-priority {
+    border: 3px solid var(--medium_priority); /* Medium priority border color */
+}
+
+.low-priority {
+    border: 3px solid var(--low_priority); /* Low priority border color */
+}
+
+.critical-priority {
+    border: 3px solid var(--critical_priority); /* Critical priority border color */
+}
+.task-priority.high-priority {
+    background-color: var(--high_priority);
+}
+
+.task-priority.medium-priority {
+    background-color: var(--medium_priority);
+}
+
+.task-priority.low-priority {
+    background-color: var(--low_priority);
+}
+
+.task-priority.critical-priority {
+    background-color: var(--critical_priority);
+}
