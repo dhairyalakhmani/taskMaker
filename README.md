@@ -25,4 +25,8 @@ This project was created as a **personal project** to practice core frontend con
 ---
 
 ## 📁 Project Structure
+taskMaker/
+├── todo.html # Main HTML file
+├── style.css # Stylesheet
+├── script.js # Application logic
 
